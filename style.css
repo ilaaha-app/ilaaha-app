@@ -1,0 +1,774 @@
+/* Import Google Fonts - Lora for elegant headings, Open Sans for readable body text */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+body {
+
+    font-family: 'Open Sans', sans-serif;
+
+    margin: 0;
+
+    padding: 20px;
+
+    background-color: #fcfaf8; /* Very light, warm off-white */
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    min-height: 100vh;
+
+    color: #3b3b3b; /* Darker, rich gray for primary text */
+
+    line-height: 1.6;
+
+}
+
+#app {
+
+    background-color: #ffffff;
+
+    border-radius: 15px; /* Slightly more rounded */
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* Deeper, softer shadow */
+
+    padding: 40px; /* More generous padding */
+
+    max-width: 500px; /* Wider for comfortable reading on mobile */
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    margin-top: 40px; /* More space from top */
+
+    padding-bottom: 60px; /* More padding at bottom */
+
+}
+
+/* Brand Logo Styling */
+
+.brand-logo {
+
+    max-width: 130px; /* Slightly larger logo for presence */
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 30px auto; /* Increased space below the logo */
+
+    border-radius: 5px;
+
+}
+
+/* Headings */
+
+h1, h2, h3 {
+
+    font-family: 'Lora', serif;
+
+    color: #4a3c30; /* A rich, deep brown for headings */
+
+    margin-bottom: 15px;
+
+    line-height: 1.2;
+
+}
+
+h1 {
+
+    font-size: 2.5em; /* Prominent main heading */
+
+    margin-top: 15px;
+
+    font-weight: 700; /* Bolder main heading */
+
+}
+
+p {
+
+    font-size: 1.05em;
+
+    line-height: 1.7;
+
+    color: #555;
+
+    margin-bottom: 1.2em; /* More consistent paragraph spacing */
+
+}
+
+h2 {
+
+    font-size: 2em;
+
+    margin-top: 50px; /* More vertical separation for sections */
+
+    margin-bottom: 30px;
+
+    font-weight: 600;
+
+}
+
+/* Filter Buttons */
+
+.filter-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap; /* Allow buttons to wrap to next line if needed */
+
+    justify-content: center;
+
+    gap: 12px; /* Space between buttons */
+
+    margin-bottom: 35px; /* Space below filter buttons */
+
+    margin-top: -10px; /* Pull them up slightly towards "Our Products" heading */
+
+}
+
+.filter-button {
+
+    background-color: #f0edea; /* Soft, earthy background for inactive buttons */
+
+    color: #5a4b40; /* Text color for inactive buttons */
+
+    border: 1px solid #e0dbd5; /* Subtle border */
+
+    padding: 10px 18px;
+
+    border-radius: 25px; /* More rounded, pill-shaped buttons */
+
+    cursor: pointer;
+
+    font-size: 0.95em;
+
+    font-weight: 600;
+
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+
+    flex-grow: 1; /* Allow buttons to grow to fill space */
+
+    max-width: 48%; /* Max width for two columns on smaller screens */
+
+    box-sizing: border-box; /* Include padding in width */
+
+}
+
+.filter-button:hover {
+
+    background-color: #e6e0d9; /* Slightly darker on hover */
+
+    transform: translateY(-2px); /* Lift effect */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+
+}
+
+.filter-button.active {
+
+    background-color: #6d5b50; /* Richer brown for active button */
+
+    color: white;
+
+    border-color: #6d5b50; /* Match border to background */
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* More prominent shadow for active */
+
+    transform: translateY(-1px); /* Slight lift */
+
+}
+
+/* Product Card Styling */
+
+.product-card {
+
+    border: 1px solid #e9e5e0; /* Very subtle, soft border */
+
+    border-radius: 12px; /* Consistent rounding */
+
+    padding: 30px; /* More padding inside cards */
+
+    margin-bottom: 35px; /* More space between cards */
+
+    background-color: #ffffff;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Refined shadow */
+
+    text-align: left;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smoother transition */
+
+    cursor: pointer; /* Indicate it's clickable */
+
+}
+
+.product-card:hover {
+
+    transform: translateY(-5px); /* More pronounced lift effect */
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+
+}
+
+.product-image {
+
+    max-width: 100%;
+
+    height: auto;
+
+    border-radius: 10px; /* Consistent rounding */
+
+    margin-bottom: 20px;
+
+    display: block;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle image shadow */
+
+}
+
+.product-card h3 {
+
+    color: #3b3b3b; /* Darker for product names */
+
+    font-size: 1.7em; /* Larger product names */
+
+    margin-top: 0;
+
+    margin-bottom: 15px;
+
+    font-weight: 500;
+
+}
+
+.product-card p {
+
+    font-size: 1.05em;
+
+    margin-bottom: 12px;
+
+}
+
+.color-chip {
+
+    display: inline-block;
+
+    background-color: #f0edea; /* Even softer, elegant background for chips */
+
+    color: #4a3c30; /* Richer text color for chips */
+
+    padding: 7px 14px; /* Larger chips */
+
+    border-radius: 7px;
+
+    font-size: 0.98em;
+
+    margin-right: 10px;
+
+    margin-bottom: 10px;
+
+    font-weight: 600;
+
+    border: 1px solid #e0dbd5; /* Subtle border for chips */
+
+}
+
+/* Inquire button style - now also used inside modal */
+
+.inquire-button {
+
+    background-color: #6d5b50; /* A richer, warmer brown */
+
+    color: white;
+
+    padding: 16px 30px; /* Even larger, more prominent button */
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 1.2em;
+
+    font-weight: 700; /* Bolder text for CTA */
+
+    margin-top: 25px; /* More space above button */
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow for CTA */
+
+}
+
+.inquire-button:hover {
+
+    background-color: #5a4b40; /* Even deeper brown on hover */
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+/* Contact Section Styling */
+
+.contact-section {
+
+    margin-top: 60px; /* More vertical separation */
+
+    padding-top: 40px;
+
+    border-top: 1px solid #f0f0f0; /* Lighter divider */
+
+    text-align: center;
+
+}
+
+.contact-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px; /* More space between buttons */
+
+    margin-top: 30px;
+
+}
+
+.contact-button {
+
+    display: block;
+
+    text-decoration: none;
+
+    padding: 15px 30px;
+
+    border-radius: 10px;
+
+    font-size: 1.15em;
+
+    font-weight: 600;
+
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    color: white;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.contact-button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.18);
+
+}
+
+/* Specific colors for each button type - more refined shades */
+
+.website-button {
+
+    background-color: #6aab75; /* Soft forest green */
+
+}
+
+.website-button:hover {
+
+    background-color: #5c9c64;
+
+}
+
+.phone-button {
+
+    background-color: #6ca0dc; /* Muted sky blue */
+
+}
+
+.phone-button:hover {
+
+    background-color: #5a8ec9;
+
+}
+
+.whatsapp-button {
+
+    background-color: #25D366; /* Standard WhatsApp green for recognition */
+
+}
+
+.whatsapp-button:hover {
+
+    background-color: #1DA851;
+
+}
+
+.email-button {
+
+    background-color: #de7e7e; /* Muted rose red */
+
+}
+
+.email-button:hover {
+
+    background-color: #cb6a6a;
+
+}
+
+/* About Us Section Styling */
+
+.about-section {
+
+    margin-top: 60px;
+
+    padding-top: 40px;
+
+    border-top: 1px solid #f0f0f0;
+
+    text-align: left;
+
+}
+
+.about-section h2 {
+
+    color: #4a3c30;
+
+    margin-bottom: 30px;
+
+    font-size: 2em;
+
+    text-align: center;
+
+    font-weight: 600;
+
+}
+
+.about-section p {
+
+    font-size: 1.08em; /* Slightly larger about us text */
+
+    line-height: 1.8; /* More comfortable line spacing */
+
+    margin-bottom: 20px;
+
+    color: #555;
+
+}
+
+.about-section p strong {
+
+    color: #3b3b3b; /* Darker highlight */
+
+}
+
+/* --- MODAL STYLES --- */
+
+.modal-overlay {
+
+    display: none; /* Hidden by default */
+
+    position: fixed; /* Stays in place even if content scrolls */
+
+    z-index: 1000; /* Sits on top of everything */
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: auto; /* Enable scroll if needed */
+
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity - dark overlay */
+
+    backdrop-filter: blur(5px); /* Optional: blur background */
+
+    -webkit-backdrop-filter: blur(5px); /* For Safari */
+
+    padding: 20px; /* Padding around the modal content */
+
+    box-sizing: border-box; /* Include padding in width/height */
+
+    /* Center content using flexbox */
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.modal-content {
+
+    background-color: #fefefe; /* White background for modal */
+
+    margin: auto;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3); /* Stronger shadow for modal */
+
+    position: relative; /* For close button positioning */
+
+    max-width: 90%; /* Max width on small screens */
+
+    width: 450px; /* Preferred width */
+
+    max-height: 90vh; /* Max height to prevent overflow on very small screens */
+
+    overflow-y: auto; /* Enable scrolling for modal content if it overflows */
+
+    text-align: center; /* Center text by default */
+
+    animation: fadeInScale 0.3s ease-out; /* Simple animation */
+
+}
+
+@keyframes fadeInScale {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+.close-button {
+
+    color: #aaa;
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 25px;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: color 0.2s;
+
+}
+
+.close-button:hover,
+
+.close-button:focus {
+
+    color: #333;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+}
+
+/* Image gallery container inside modal */
+
+.modal-image-gallery {
+
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 20px;
+
+    display: flex; /* Use flex to center image and buttons */
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.modal-image {
+
+    max-width: 100%;
+
+    height: auto;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.gallery-nav-button {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 15px;
+
+    font-size: 1.5em;
+
+    cursor: pointer;
+
+    border-radius: 50%; /* Circular buttons */
+
+    transition: background-color 0.3s ease;
+
+    z-index: 10; /* Ensure buttons are above image */
+
+}
+
+.gallery-nav-button:hover {
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.prev-button {
+
+    left: 10px;
+
+}
+
+.next-button {
+
+    right: 10px;
+
+}
+
+/* Image Dots (Indicators) */
+
+.image-dots-container {
+
+    position: absolute;
+
+    bottom: 10px; /* Position below image */
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px; /* Space between dots */
+
+    z-index: 10;
+
+}
+
+.image-dot {
+
+    width: 10px;
+
+    height: 10px;
+
+    background-color: rgba(255, 255, 255, 0.6); /* White semi-transparent dots */
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    border: 1px solid rgba(0,0,0,0.2); /* Small border for visibility */
+
+}
+
+.image-dot.active {
+
+    background-color: #6d5b50; /* Active dot matches brand color */
+
+    transform: scale(1.2); /* Active dot slightly larger */
+
+    border-color: #6d5b50;
+
+}
+
+.modal-content h3 {
+
+    font-size: 1.8em;
+
+    margin-bottom: 15px;
+
+    color: #4a3c30;
+
+}
+
+.modal-content p {
+
+    font-size: 1.05em;
+
+    line-height: 1.7;
+
+    margin-bottom: 12px;
+
+    color: #555;
+
+    text-align: left; /* Align text left within modal paragraphs */
+
+}
+
+.modal-content p strong {
+
+    color: #3b3b3b;
+
+}
+
+/* Style for the inquire button inside the modal */
+
+.modal-inquire-button {
+
+    margin-top: 30px; /* More space above the button in modal */
+
+    font-size: 1.3em; /* Make it slightly larger */
+
+    padding: 18px 30px;
+
+}
+
+/* This class is added/removed by JavaScript to show/hide the modal */
+
+.modal-overlay.active {
+
+    display: flex; /* Show the modal with flexbox for centering */
+
+}
+
